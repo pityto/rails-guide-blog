@@ -1,0 +1,11 @@
+<div class="ui modal" id="edit_article_modal">
+  <i class="close icon"></i>
+  <h2 class="ui dividing header">修改 Article</h2>
+  <div class="content">
+    <%= render 'form', url: article_path(@article), meth: :put %>
+    <div class="actions">
+      <div class="ui blue button" id="commit">确定</div>
+      <div class="ui button cancel">取消</div>
+    </div>
+  </div>
+</div>

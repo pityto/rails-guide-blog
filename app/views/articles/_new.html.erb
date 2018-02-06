@@ -1,0 +1,12 @@
+<div class="ui modal" id="new_article_modal">
+  <i class="close icon"></i>
+  <h2 class="ui dividing header">新增Article</h2>
+  <div class="content">
+    <%= render 'form', url: articles_path, meth: :post %>
+    <div class="actions">
+      <div class="ui blue button" id="commit">确定</div>
+      <div class="ui button cancel">取消</div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,11 @@
+<% if @article.errors.blank? %>
+$("#article_<%= @article.id %>").replaceWith("<%= j render('list', article: @article) %>");
+$("#edit_article_modal").modal('hide');
+<% else %>
+$(".field .red.pointing").remove();
+<% @article.errors.messages.each do |key, value| %>
+//parent()方法：返回被选中元素的父元素
+$("#article_<%= key %>").parent().addClass('error');
+$("#article_<%= key %>").parent().append("<div class='ui basic red pointing prompt label transition visible'><%= value[0] %></div>");
+<% end %>
+<% end %>

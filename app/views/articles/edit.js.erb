@@ -1,0 +1,9 @@
+$("#edit_article_modal").remove();
+$('body').append("<%= j(render 'edit') %>");
+$('#edit_article_modal').modal('setting', {autofocus: false}).modal('show');
+$(".select.dropdown").dropdown();
+
+//表单提交
+$("#commit").click(function () {
+    $("#edit_article_<%= @article.id %>").submit();
+});

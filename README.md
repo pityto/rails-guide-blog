@@ -1,3 +1,3 @@
 # README
-Ruby on Rails Guide上的blog，还未在此基础上做修改
-(使用的数据库是mysql)
+Ruby on Rails Guide上的blog，在基础上加入了jquery，semantic
+可以当做一个模板来使用。
